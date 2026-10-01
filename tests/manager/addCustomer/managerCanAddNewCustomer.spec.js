@@ -2,10 +2,8 @@ import { test } from "@playwright/test";
 import { faker } from "@faker-js/faker";
 import { AddCustomerPage } from "../../../src/pages/manager/AddCustomerPage";
 import { CustomersListPage } from "../../../src/pages/manager/CustomersListPage";
-import { BankManagerMainPage } from "../../../src/pages/manager/BankManagerMainPage";
 
 test("Assert manager can add new customer", async ({ page }) => {
-  const bankManagerMainPage = new BankManagerMainPage(page);
   const addCustomerPage = new AddCustomerPage(page);
   const customersListPage = new CustomersListPage(page);
 
@@ -20,7 +18,7 @@ test("Assert manager can add new customer", async ({ page }) => {
   await addCustomerPage.clickAddCustumeButton();
 
   await page.reload();
-  await bankManagerMainPage.clickCustomersButton();
+  await customersListPage.open();
 
   await customersListPage.assertCustomerDataIsPresentInLastRow(
     firstName,

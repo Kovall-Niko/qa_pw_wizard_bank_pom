@@ -1,4 +1,4 @@
-import { test } from "@playwright/test";
+import { test } from '@playwright/test';
 import { BankHomePage } from "../../../src/pages/BankHomePage";
 import { BankManagerMainPage } from "../../../src/pages/manager/BankManagerMainPage";
 

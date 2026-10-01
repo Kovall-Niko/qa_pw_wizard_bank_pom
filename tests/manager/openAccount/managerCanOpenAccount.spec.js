@@ -1,8 +1,7 @@
-import { test } from "@playwright/test";
-import { faker } from "@faker-js/faker";
+import { test } from '@playwright/test';
+import { faker } from '@faker-js/faker';
 import { AddCustomerPage } from "../../../src/pages/manager/AddCustomerPage";
 import { OpenAccountPage } from "../../../src/pages/manager/OpenAccountPage";
-import { BankHomePage } from "../../../src/pages/BankHomePage";
 import { CustomersListPage } from "../../../src/pages/manager/CustomersListPage";
 import { BankManagerMainPage } from "../../../src/pages/manager/BankManagerMainPage";
 
@@ -37,7 +36,7 @@ test.beforeEach(async ({ page }) => {
   */
 });
 
-test("Assert manager can add new customer", async ({ page }) => {
+test("Assert manager can open account for customer", async ({ page }) => {
   const openAccountPage = new OpenAccountPage(page);
   const bankManagerMainPage = new BankManagerMainPage(page);
   const customersListPage = new CustomersListPage(page);
@@ -47,7 +46,6 @@ test("Assert manager can add new customer", async ({ page }) => {
   await openAccountPage.selectCurrency("Dollar");
   await openAccountPage.clickProcessButton();
   await page.reload();
-  await bankManagerMainPage.clickCustomersButton();
 
   await customersListPage.open();
   await customersListPage.assertAccountNumberOfCustomerNotEmpty();

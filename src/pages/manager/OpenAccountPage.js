@@ -4,7 +4,7 @@ export class OpenAccountPage {
   constructor(page) {
     this.page = page;
     this.currencyDropdown = page.locator("#currency");
-    this.customerDropdowm = page.locator("#userSelect");
+    this.customerDropdown = page.locator("#userSelect");
     this.processButton = page.getByRole("button", { name: "Process" });
   }
 
@@ -24,7 +24,7 @@ export class OpenAccountPage {
   }
 
   async selectCustomerFromDropdown(fullName) {
-    await this.customerDropdowm.selectOption({ label: fullName });
+    await this.customerDropdown.selectOption({ label: fullName });
   }
 
   async clickProcessButton() {

@@ -1,5 +1,5 @@
-import { test } from "@playwright/test";
-import { faker } from "@faker-js/faker";
+import { test } from '@playwright/test';
+import { faker } from '@faker-js/faker';
 import { AddCustomerPage } from "../../../src/pages/manager/AddCustomerPage";
 import { CustomersListPage } from "../../../src/pages/manager/CustomersListPage";
 
@@ -35,7 +35,7 @@ test("Assert manager can search customer by Last Name", async ({ page }) => {
   const customersListPage = new CustomersListPage(page);
 
   await customersListPage.open();
-  await customersListPage.fillSearchField(lastName);
+  await customersListPage.fillSearchFieldLastName(lastName);
   await customersListPage.assertCustomerDataIsPresentInLastRow(
     firstName,
     lastName,

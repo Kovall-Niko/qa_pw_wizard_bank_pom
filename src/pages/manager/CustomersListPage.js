@@ -57,15 +57,15 @@ export class CustomersListPage {
     await expect(accountNumberCell).not.toBeEmpty();
   }
 
-  async fillSearchField(firstName) {
+  async fillSearchFieldFirstName(firstName) {
     await this.searchField.fill(firstName);
   }
 
-  async fillSearchField(lastName) {
+  async fillSearchFieldLastName(lastName) {
     await this.searchField.fill(lastName);
   }
 
-  async fillSearchField(postCode) {
+  async fillSearchFieldPostCode(postCode) {
     await this.searchField.fill(postCode);
   }
 }
