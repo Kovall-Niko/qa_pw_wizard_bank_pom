@@ -1,7 +1,7 @@
-import { test } from "@playwright/test";
-import { faker } from "@faker-js/faker";
-import { AddCustomerPage } from "../../../src/pages/manager/AddCustomerPage";
-import { CustomersListPage } from "../../../src/pages/manager/CustomersListPage";
+import { test } from '@playwright/test';
+import { faker } from '@faker-js/faker';
+import { AddCustomerPage } from '../../../src/pages/manager/AddCustomerPage';
+import { CustomersListPage } from '../../../src/pages/manager/CustomersListPage';
 
 test("Assert manager can add new customer", async ({ page }) => {
   const addCustomerPage = new AddCustomerPage(page);
@@ -15,7 +15,7 @@ test("Assert manager can add new customer", async ({ page }) => {
   await addCustomerPage.fillFieldFirstName(firstName);
   await addCustomerPage.fillFieldLastName(lastName);
   await addCustomerPage.fillFieldPostCode(postCode);
-  await addCustomerPage.clickAddCustumeButton();
+  await addCustomerPage.clickAddCustumerButton();
 
   await page.reload();
   await customersListPage.open();

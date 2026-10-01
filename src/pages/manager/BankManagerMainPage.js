@@ -1,4 +1,4 @@
-import { expect } from "@playwright/test";
+import { expect } from '@playwright/test';
 
 export class BankManagerMainPage {
   constructor(page) {

@@ -4,7 +4,7 @@ export class AddCustomerPage {
     this.fieldFirstName = page.getByPlaceholder("First Name");
     this.fieldLastName = page.getByPlaceholder("Last Name");
     this.fieldPostCode = page.getByPlaceholder("Post Code");
-    this.addCustumeButton = page
+    this.addCustumerButton = page
       .getByRole("form")
       .getByRole("button", { name: "Add Customer" });
   }
@@ -27,7 +27,7 @@ export class AddCustomerPage {
     await this.fieldPostCode.fill(numb);
   }
 
-  async clickAddCustumeButton() {
-    await this.addCustumeButton.click();
+  async clickAddCustumerButton() {
+    await this.addCustumerButton.click();
   }
 }

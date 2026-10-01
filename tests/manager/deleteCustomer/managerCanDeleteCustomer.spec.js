@@ -1,7 +1,7 @@
-import { test } from "@playwright/test";
-import { faker } from "@faker-js/faker";
-import { AddCustomerPage } from "../../../src/pages/manager/AddCustomerPage";
-import { CustomersListPage } from "../../../src/pages/manager/CustomersListPage";
+import { test } from '@playwright/test';
+import { faker } from '@faker-js/faker';
+import { AddCustomerPage } from '../../../src/pages/manager/AddCustomerPage';
+import { CustomersListPage } from '../../../src/pages/manager/CustomersListPage';
 
 let firstName;
 let lastName;
@@ -18,7 +18,7 @@ test.beforeEach(async ({ page }) => {
   await addCustomerPage.fillFieldFirstName(firstName);
   await addCustomerPage.fillFieldLastName(lastName);
   await addCustomerPage.fillFieldPostCode(postCode);
-  await addCustomerPage.clickAddCustumeButton();
+  await addCustomerPage.clickAddCustumerButton();
 
   /* 
   Pre-conditons:
